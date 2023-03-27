@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="tabs">
+    <button class="tablinks" onclick="openTab(event, 'calculo-imc')">Cálculo de IMC</button>
+    <button class="tablinks" onclick="openTab(event, 'tabela-imc')">Tabela de IMC</button>
+  </div>
+  
+  <div id="calculo-imc" class="tabcontent">
+    <h2>Cálculo de IMC</h2>
+    <form>
+      <label for="altura">Altura (m):</label>
+      <input type="number" id="altura" name="altura" step="0.01"><br>
+
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" name="peso" step="0.1"><br>
+
+      <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+    </form>
+
+    <div id="resultado-imc"></div>
+  </div>
+
+  <div id="tabela-imc" class="tabcontent">
+    <h2>Tabela de IMC por idade</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Idade</th>
+          <th>IMC ideal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>18-24</td>
+          <td>19-24</td>
+        </tr>
+        <tr>
+          <td>25-34</td>
+          <td>20-25</td>
+        </tr>
+        <tr>
+          <td>35-44</td>
+          <td>21-26</td>
+        </tr>
+        <tr>
+          <td>45-54</td>
+          <td>22-27</td>
+        </tr>
+        <tr>
+          <td>55-64</td>
+          <td>23-28</td>
+        </tr>
+        <tr>
+          <td>65-74</td>
+          <td>24-29</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
